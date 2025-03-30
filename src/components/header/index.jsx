@@ -2,7 +2,7 @@ import "./index.css";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h2 className="logo">EcoTech</h2>
       <nav className="navbar">
         <ul className="navbar-links-group">
