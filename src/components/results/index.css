@@ -1,0 +1,20 @@
+.results {
+  width: 100%;
+}
+
+.results-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  padding: 0 25px;
+  width: 100%;
+}
+
+.results-title {
+  font-size: var(--font-size-title-3);
+}
+
+.results-description {
+  font-size: var(--font-size-text-2);
+}
