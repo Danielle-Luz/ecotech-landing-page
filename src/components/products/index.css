@@ -1,3 +1,34 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.products::after {
+  background: linear-gradient(to left, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+  content: "";
+  left: calc(100% - 230px);
+  height: 100%;
+  position: absolute;
+  width: 230px;
+}
+
+.products-cards {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+}
+
+.product-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .product-image {
-  
+  height: 188px;
+  object-fit: cover;
+  object-position: center;
+  width: 340px;
 }
