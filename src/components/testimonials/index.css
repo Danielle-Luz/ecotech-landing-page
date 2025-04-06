@@ -1,0 +1,16 @@
+.testimonials {
+  padding: 137px 0;
+}
+
+.testimonials-text {
+  background-image: url("../../../public/assets/linear-clouds-background.svg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 292px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
