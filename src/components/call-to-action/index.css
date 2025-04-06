@@ -1,7 +1,6 @@
 .call-to-action-wrapper {
   height: 500px;
   margin: 40px 0;
-  padding: 0 80px;
   width: 100%;
 }
 
@@ -25,6 +24,7 @@
 }
 
 .call-to-action-content {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -42,33 +42,9 @@
   width: 100%;
 }
 
-.call-to-action-title, .call-to-action-text {
-  color: white;
-}
-
-.call-to-action-title {
-  font-size: var(--font-size-title-1)
-}
-
-.call-to-action-text {
-  font-size: var(--font-size-text-1);
-}
-
 @media (max-width: 690px) {
-  .call-to-action-wrapper {
-    padding: 0 25px;
-  }
-
   .call-to-action-gradient {
     padding: 0 25px;
-  }
-
-  .call-to-action-title {
-    font-size: var(--font-size-title-3)
-  }
-  
-  .call-to-action-text {
-    font-size: var(--font-size-text-2);
   }
 }
 

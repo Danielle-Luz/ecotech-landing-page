@@ -2,6 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./pages/home";
 import "./styles/global.css";
+import "./styles/texts/index.css";
+import "./styles/spacing/index.css";
 
 const htmlRootNode = document.getElementById("root");
 
