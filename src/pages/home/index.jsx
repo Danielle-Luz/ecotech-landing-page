@@ -1,5 +1,6 @@
 import CallToAction from "../../components/call-to-action";
 import Header from "../../components/header";
+import Products from "../../components/products";
 import Results from "../../components/results";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Header />
       <CallToAction />
       <Results />
+      <Products />
     </>
   )
 };

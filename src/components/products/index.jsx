@@ -6,7 +6,7 @@ const Products = () => {
       <h2 className="title-2">Our products</h2>
       <ul>
         {
-          products.forEach((product, index) => {
+          products.map((product, index) => {
             return (
               <li key={index}>
                 <img className="product-image" src={product.image} />
