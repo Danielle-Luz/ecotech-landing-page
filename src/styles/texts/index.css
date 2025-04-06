@@ -1,0 +1,30 @@
+.title-1 {
+  font-size: var(--font-size-title-1)
+}
+
+.title-2 {
+  font-size: var(--font-size-title-3);
+}
+
+.title-3 {
+  font-size: var(--font-size-text-2);
+  font-weight: bold;
+}
+
+.text-1 {
+  font-size: var(--font-size-text-1);
+}
+
+.text-2 {
+  font-size: var(--font-size-text-2);
+}
+
+@media (max-width: 690px) {
+  .title-1 {
+    font-size: var(--font-size-title-3)
+  }
+  
+  .text-1 {
+    font-size: var(--font-size-text-2);
+  }
+}
