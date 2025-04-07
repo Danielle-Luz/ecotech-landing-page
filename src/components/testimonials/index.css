@@ -5,17 +5,19 @@
 
 .testimonials-cards {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 80px;
   justify-content: center;
   position: relative;
-  top: -40px;
+  top: -30px;
 }
 
 .testimonial-card-item {
   box-shadow: 4px 4px 20px var(--color-grey-low-opacity-3);
   height: fit-content;
   position: relative;
-  width: 386px;
+  max-width: 386px;
+  width: 100%;
 }
 
 .testimonials-text {
@@ -43,7 +45,7 @@
   border-radius: 10px 10px 0 0;
   display: flex;
   justify-content: center;
-  height: 150px;
+  height: 170px;
   width: 100%;
 }
 
@@ -56,4 +58,8 @@
   gap: 10px;
   height: 94px;
   width: 100%;
+}
+
+@media (max-width: 1135px) {
+  
 }
