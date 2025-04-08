@@ -1,4 +1,5 @@
 import CallToAction from "../../components/call-to-action";
+import EconomyForm from "../../components/economy-form";
 import Header from "../../components/header";
 import Products from "../../components/products";
 import Results from "../../components/results";
@@ -12,6 +13,7 @@ const Home = () => {
       <Results />
       <Products />
       <Testimonials />
+      <EconomyForm />
     </>
   )
 };
