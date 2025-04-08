@@ -6,6 +6,7 @@
   --color-secondary-1: #A7C14D;
   --color-grey-low-opacity-1: RGBA(0, 0, 0, 0.1);
   --color-grey-low-opacity-2: rgba(0, 0, 0, 0.6);
+  --color-grey-low-opacity-3: RGBA(0, 0, 0, 15%);;
 
   --font-size-title-1: 50px;
   --font-size-title-2: 40px;
