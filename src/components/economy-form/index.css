@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
+  margin-bottom: 180px;
   width: 100%;
 }
 
@@ -14,8 +15,11 @@
 
 .economy-form-wrapper {
   align-items: center;
+  align-content: center;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 100px;
   width: 100%;
 }
 
@@ -73,4 +77,48 @@
 .economy-form-fielset-checkbox {
   flex-direction: row;
   justify-content: space-between;
+}
+
+.economy-card {
+  background-color: white;
+  box-shadow: 4px 4px 20px var(--color-grey-low-opacity-3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding: 40px;
+  max-width: 474px;
+  width: 100%;
+}
+
+.economy-result {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid var(--color-grey-2);
+  gap: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.economy-result-value {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.economy-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.economy-metric-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 470px) {
+  .economy-form-fielset-checkbox, .economy-metric-item {
+    flex-direction: column;
+  }
 }

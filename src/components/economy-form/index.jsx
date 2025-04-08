@@ -38,6 +38,27 @@ const EconomyForm = () => {
             </article>
           </fieldset>
         </form>
+        <article className="economy-card">
+          <article className="economy-result">
+            <h3 className="title-3">Financial Savings</h3>
+            <p className="economy-result-value">$ 40.000</p>
+          </article>
+          <ul className="economy-metrics">
+            <li className="economy-metric-item">
+              <p className="title-4">CO₂ Reduction</p>
+              <p className="title-3">Up to $60/month</p>
+            </li>
+            <li className="economy-metric-item">
+              <p className="title-4">Return on Investment</p>
+              <p className="title-3">4-6 years</p>
+            </li>
+            <li className="economy-metric-item">
+              <p className="title-4">Energy Independence</p>
+              <p className="title-3">Up to 90%</p>
+            </li>
+          </ul>
+          <button className="button-1">Start Saving Now</button>
+        </article>
       </article>
     </section>
   )
