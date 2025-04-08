@@ -2,7 +2,7 @@ import "./index.css";
 
 const EconomyForm = () => {
   return (
-    <section className="horizontal-spacing-1 economy-form-content-wrapper">
+    <section id="savings" className="horizontal-spacing-1 economy-form-content-wrapper">
       <article className="economy-form-text">
         <h2 className="title-2">Discover How Much You Can Save!</h2>
         <p className="text-2">
