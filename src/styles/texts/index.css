@@ -11,6 +11,12 @@
   font-weight: bold;
 }
 
+.title-4 {
+  color: var(--color-grey-2);
+  font-size: var(--font-size-text-2);
+  font-weight: bold;
+}
+
 .text-1 {
   font-size: var(--font-size-text-1);
 }
