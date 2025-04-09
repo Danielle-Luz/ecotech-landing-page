@@ -21,6 +21,11 @@ const Footer = () => {
           Subscribe to our newsletter for sustainable tips, product updates, and
           exclusive offers.
         </p>
+        <article className="subscribe-email-field-wrapper">
+          <label htmlFor="subscribe-email" hidden>Insert your email to subscribe</label>
+          <input id="subscribe-email-field" className="form-field-1 subscribe-email-field" placeholder="Enter your email here..." />
+          <button className="button-2">Subscribe</button>
+        </article>
       </article>
     </footer>
   );
