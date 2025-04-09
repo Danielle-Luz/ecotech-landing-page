@@ -56,3 +56,28 @@
 .footer-copywright {
   text-align: center;
 }
+
+@media (max-width: 1060px) {
+  .footer-wrapper {
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 41px 25px;
+  }
+
+  .subscribe-email-field-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
