@@ -75,8 +75,11 @@
 }
 
 .economy-form-fielset-checkbox {
+  border: none;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  outline: none;
 }
 
 .economy-card {

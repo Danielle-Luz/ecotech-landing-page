@@ -16,8 +16,14 @@ const Footer = () => {
           </li>
         </ul>
       </article>
+      <article className="footer-content-wrapper">
+        <p className="title-3">
+          Subscribe to our newsletter for sustainable tips, product updates, and
+          exclusive offers.
+        </p>
+      </article>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
