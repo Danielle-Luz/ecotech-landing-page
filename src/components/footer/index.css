@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey-1);
+  padding: 41px 80px;
+}
+
+.logo-footer {
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
