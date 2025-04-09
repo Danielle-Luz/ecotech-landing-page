@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .footer {
-  display: flex;
-  background-color: var(--color-grey-1);
   color: white;
-  justify-content: space-between;
+  background-color: var(--color-grey-1);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   padding: 41px 80px;
 }
 
 .footer * {
   color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-content-wrapper {
@@ -45,4 +51,8 @@
 
 .subscribe-email-field {
   flex-grow: 1;
+}
+
+.footer-copywright {
+  text-align: center;
 }
