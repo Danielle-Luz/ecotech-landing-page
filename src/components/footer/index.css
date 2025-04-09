@@ -2,25 +2,25 @@
 
 .footer {
   display: flex;
-  flex-direction: column;
-  color: var(--color-grey-1);
+  background-color: var(--color-grey-1);
+  color: white;
+  justify-content: space-between;
   padding: 41px 80px;
+}
+
+.footer * {
+  color: white;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .logo-footer {
   font-size: 30px;
   font-family: "DM Sans", sans-serif;
-}
-
-.footer-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo-footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .footer-content {

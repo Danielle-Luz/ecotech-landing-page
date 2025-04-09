@@ -4,9 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <article className="footer-content-wrapper">
-        <div className="logo-footer-wrapper">
-          <h2 className="logo-footer">EcoTech</h2>
-        </div>
+        <h2 className="logo-footer">EcoTech</h2>
         <ul className="footer-content">
           <li className="footer-contact-info">
             <h3 className="title-3">Email</h3>
