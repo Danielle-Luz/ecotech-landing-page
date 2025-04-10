@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.footer {
+  color: white;
+  background-color: var(--color-grey-1);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 41px 80px;
+}
+
+.footer * {
+  color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 490px;
+  width: 100%;
+}
+
+.logo-footer {
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe-email-field-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.subscribe-email-field {
+  flex-grow: 1;
+}
+
+.footer-copywright {
+  text-align: center;
+}
+
+@media (max-width: 1060px) {
+  .footer-wrapper {
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 41px 25px;
+  }
+
+  .subscribe-email-field-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

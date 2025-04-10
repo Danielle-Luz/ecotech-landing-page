@@ -1,0 +1,24 @@
+.form-fieldset-1 {
+  display: flex;
+  border: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-field-1 {
+  background-color: var(--color-grey-3);
+  border-bottom: 3px solid transparent;
+  font-size: var(--font-size-text-2);
+  padding: 10px 20px;
+  height: 41px;
+}
+
+.form-field-1:hover,
+.form-field-1:active {
+  border-bottom: 3px solid var(--color-primary-1);
+}
+
+.form-field-1::placeholder {
+  color: var(--color-grey-2);
+}
