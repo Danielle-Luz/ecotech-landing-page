@@ -1,0 +1,13 @@
+.product-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-snap-align: center;
+}
+
+.product-image {
+  height: 188px;
+  object-fit: cover;
+  object-position: center;
+  width: 340px;
+}
