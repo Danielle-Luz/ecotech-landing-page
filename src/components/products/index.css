@@ -9,29 +9,22 @@
   text-align: center;
 }
 
-.products-cards {
+.product-card-item {
   display: flex;
-  gap: 30px;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
-.products-card-wrapper {
-  align-items: center;
-  display: flex;
+.product-image {
+  border-radius: 8px;
+  height: 188px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.slick-track {
+  display: flex !important;
   gap: 20px;
-}
-
-.product-arrow {
-  width: 50px;
-  z-index: 2;
-}
-
-.hide {
-  visibility: hidden;
-}
-
-.mirror {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
