@@ -1,0 +1,9 @@
+.carousel-arrow {
+  width: 50px;
+  z-index: 2;
+}
+
+.mirror {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
