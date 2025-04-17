@@ -7,3 +7,9 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+@media (max-width: 460px) {
+  .carousel-arrow  {
+    width: 35px;
+  }
+}
