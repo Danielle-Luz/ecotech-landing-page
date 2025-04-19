@@ -12,9 +12,14 @@
     • <a href="#Developer">Developer</a>
 </p>
 
+<h2 id="Preview"> :eyes: Preview</h2>
+
+<h3>Desktop</h3>
 <p align="center">
    <img src="public\assets\EcoTech desktop.gif" alt="gif showing the site opened on a desktop device" /> 
 </p>
+
+<h3>Responsiveness</h3>
 <p align="center">
    <img src="public\assets\EcoTech responsive.gif" alt="gif showing the site responsiveness" /> 
 </p>
