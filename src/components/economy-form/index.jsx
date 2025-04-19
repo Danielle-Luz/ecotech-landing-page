@@ -2,11 +2,38 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import formSchema from "./formSchema";
 import "./index.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const EconomyForm = () => {
   const {handleSubmit, register, formState: {errors}} = useForm({resolver: yupResolver(formSchema), mode: "onChange"});
+  const [systemCapacity, setSystemCapacity] = useState(0);
+  const [coverageOfEnergy, setCoverageOfEnergy] = useState(0);
+  const [billReduction, setBillReduction] = useState(0);
 
+  const calculateSystemCapacity = ({space, solarPanel, commercialSystem, portableKits}) => {
+    const availableSystemsToSelect = {solarPanel, commercialSystem, portableKits};
+    
+    const calculatedCapacityPerSystem = {
+      solarPanel: space * 0.15,
+      commercialSystem: space * 0.20,
+      portableKits: 0.5
+    } 
+
+    const selectedSystems = Object.keys(availableSystemsToSelect).filter(
+      availableSystem => 
+        availableSystemsToSelect[availableSystem] != false
+    );
+
+    return selectedSystems.reduce(
+      (total, selectedSystem) => total + calculatedCapacityPerSystem[selectedSystem],
+      0
+    );
+  }
+
+  const calculateEnergySavings = (formData) => {
+    console.log(calculateSystemCapacity(formData))
+  }
+ 
   const resetFieldsWithErrors = () => {
     Object.keys(errors).forEach(fieldName => {
         errors[fieldName].ref.value = ""
@@ -26,7 +53,7 @@ const EconomyForm = () => {
         </p>
       </article>
       <article className="economy-form-wrapper">
-        <form onSubmit={handleSubmit((data) => console.log(data))} className="economy-form">
+        <form onSubmit={handleSubmit(calculateEnergySavings)} className="economy-form">
           <fieldset className="form-fieldset-1">
             <label className="title-3" htmlFor="consumption">Monthly Energy Consumption</label>
             <input className="form-field-1 text-2" id="consumption" placeholder="Enter your average consumption in kWh (e.g., 300 kWh)" type="text" {...register("consumption")} />
@@ -41,15 +68,15 @@ const EconomyForm = () => {
           </fieldset>
           <fieldset className="economy-form-fielset-checkbox">
             <article className="economy-form-field-checkbox-wrapper">
-              <input className="form-field-1 economy-form-field-checkbox text-2" id="solar-panel" name="solar-panel" type="checkbox" value="Residential Solar Panels" />
+              <input className="form-field-1 economy-form-field-checkbox text-2" id="solar-panel" name="solar-panel" type="checkbox" value="Residential Solar Panels" {...register("solarPanel")} />
               <label className="text-2" htmlFor="solar-panel">Residential Solar Panels</label>
             </article>
             <article className="economy-form-field-checkbox-wrapper">
-              <input className="form-field-1 economy-form-field-checkbox text-2" id="commercial-systems" name="commercial-systems" type="checkbox" value="Commercial Systems" />
+              <input className="form-field-1 economy-form-field-checkbox text-2" id="commercial-systems" name="commercial-systems" type="checkbox" value="Commercial Systems" {...register("commercialSystem")} />
               <label className="text-2" htmlFor="commercial-systems">Commercial Systems</label>
             </article>
             <article className="economy-form-field-checkbox-wrapper">
-              <input className="form-field-1 economy-form-field-checkbox text-2" id="portable-kits" name="portable-kits" type="checkbox" value="Portable Kits" />
+              <input className="form-field-1 economy-form-field-checkbox text-2" id="portable-kits" name="portable-kits" type="checkbox" value="Portable Kits" {...register("portableKits")} />
               <label className="text-2" htmlFor="portable-kits">Portable Kits</label>
             </article>
           </fieldset>
