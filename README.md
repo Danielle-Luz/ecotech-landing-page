@@ -12,17 +12,27 @@
     • <a href="#Developer">Developer</a>
 </p>
 
+<h2 id="Preview"> :eyes: Preview</h2>
+
+<h3>Desktop</h3>
 <p align="center">
-   <img src="src\assets\imgs\readme\site-pc.gif" alt="gif showing the site opened on a desktop device" /> 
+   <img src="public\assets\EcoTech desktop.gif" alt="gif showing the site opened on a desktop device" /> 
+</p>
+
+<h3>Responsiveness</h3>
+<p align="center">
+   <img src="public\assets\EcoTech responsive.gif" alt="gif showing the site responsiveness" /> 
 </p>
 
 <h2 id="How to access"> :computer_mouse: How to access?</h2>
 
-Access and interact with the project: <a href="">click here to view it.</a>.
+Access and interact with the project: <a href="">click here to access it</a>.
 
 
 <h2 id="Description">:pencil2: Description</h2>
-A landing page for a fictional company that is specialized on selling renewable energy related products.
+A responsive landing page for a fictional company that is specialized on selling renewable energy related products.
+
+The site is based on a figma design created by me: <a href="https://www.figma.com/proto/x2GmTcvJNiGQLQBoQhvMpL/EcoTech?node-id=19-3&p=f&t=P3FcFUHSLqDwEQMy-0&scaling=min-zoom&content-scaling=fixed&page-id=19%3A2">click here to view it</a>.
 
 
 <h2 id="Tecnologies">:computer: Tecnologies</h2>
