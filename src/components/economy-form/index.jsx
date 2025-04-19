@@ -98,7 +98,7 @@ const EconomyForm = () => {
           </fieldset>
           <fieldset className="economy-form-fielset-checkbox">
             <article className="economy-form-field-checkbox-wrapper">
-              <input className="form-field-1 economy-form-field-checkbox text-2" id="solar-panel" name="solar-panel" type="checkbox" value="Residential Solar Panels" {...register("solarPanel")} />
+              <input checked={true} className="form-field-1 economy-form-field-checkbox text-2" id="solar-panel" name="solar-panel" type="checkbox" value="Residential Solar Panels" {...register("solarPanel")} />
               <label className="text-2" htmlFor="solar-panel">Residential Solar Panels</label>
             </article>
             <article className="economy-form-field-checkbox-wrapper">
