@@ -1,6 +1,22 @@
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup"
+import formSchema from "./formSchema";
 import "./index.css";
+import { useEffect } from "react";
 
 const EconomyForm = () => {
+  const {handleSubmit, register, formState: {errors}} = useForm({resolver: yupResolver(formSchema), mode: "onChange"});
+
+  const resetFieldsWithErrors = () => {
+    Object.keys(errors).forEach(fieldName => {
+        errors[fieldName].ref.value = ""
+    })
+  }
+
+  useEffect(() => {
+    resetFieldsWithErrors();
+  }, [errors.consumption, errors.energyBill, errors.space]);
+
   return (
     <section id="savings" className="horizontal-spacing-1 economy-form-content-wrapper">
       <article className="economy-form-text">
@@ -10,18 +26,18 @@ const EconomyForm = () => {
         </p>
       </article>
       <article className="economy-form-wrapper">
-        <form className="economy-form">
+        <form onSubmit={handleSubmit((data) => console.log(data))} className="economy-form">
           <fieldset className="form-fieldset-1">
             <label className="title-3" htmlFor="consumption">Monthly Energy Consumption</label>
-            <input className="form-field-1 text-2" id="consumption" placeholder="Enter your average consumption in kWh (e.g., 300 kWh)" type="text" />
+            <input className="form-field-1 text-2" id="consumption" placeholder="Enter your average consumption in kWh (e.g., 300 kWh)" type="text" {...register("consumption")} />
           </fieldset>
           <fieldset className="form-fieldset-1">
             <label className="title-3" htmlFor="energy-bill">Average Energy Bill</label>
-            <input className="form-field-1 text-2" id="energy-bill" placeholder="Enter your monthly bill in dollars (e.g., $150)" type="text" />
+            <input className="form-field-1 number-2" id="energy-bill" placeholder="Enter your monthly bill in dollars (e.g., $150)" type="text" {...register("energyBill")} />
           </fieldset>
           <fieldset className="form-fieldset-1">
-            <label className="title-3" htmlFor="location">Location (for Solar Irradiation Calculation)</label>
-            <input className="form-field-1 text-2" id="location" placeholder="Select state/city (e.g., California, Texas, etc.)" type="text" />
+            <label className="title-3" htmlFor="space">Available Installation Area (m²)</label>
+            <input className="form-field-1 number-2" id="space" placeholder="Enter the space you can dedicate to solar panels" type="text" {...register("space")} />
           </fieldset>
           <fieldset className="economy-form-fielset-checkbox">
             <article className="economy-form-field-checkbox-wrapper">
@@ -37,6 +53,7 @@ const EconomyForm = () => {
               <label className="text-2" htmlFor="portable-kits">Portable Kits</label>
             </article>
           </fieldset>
+          <input type="submit" className="button-1" value="Fazer simulação" />
         </form>
         <article className="economy-card">
           <article className="economy-result">
@@ -57,7 +74,6 @@ const EconomyForm = () => {
               <p className="title-3">Up to 90%</p>
             </li>
           </ul>
-          <button className="button-1">Start Saving Now</button>
         </article>
       </article>
     </section>
