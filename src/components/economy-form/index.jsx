@@ -30,8 +30,23 @@ const EconomyForm = () => {
     );
   }
 
+  const calculateCoverageOfEnergy = (systemCapacity, energyConsumption) => {
+    const monthlySunHours = 120; // total of 4 hours of sun per day during a hole month
+    return (systemCapacity * monthlySunHours) / energyConsumption * 100
+  }
+
+  const calculateBillReduction = (averageEnergyBill, coverageOfEnergy) => {
+    return coverageOfEnergy * averageEnergyBill;
+  }
+
   const calculateEnergySavings = (formData) => {
-    console.log(calculateSystemCapacity(formData))
+    const systemCapacityResult = calculateSystemCapacity(formData);
+    const coverageOfEnergyResult = calculateCoverageOfEnergy(systemCapacityResult, formData.consumption);
+    const billReductionResult = calculateBillReduction(formData.energyBill, coverageOfEnergyResult);
+
+    setSystemCapacity(systemCapacityResult);
+    setCoverageOfEnergy(coverageOfEnergyResult);
+    setBillReduction(billReductionResult);
   }
  
   const resetFieldsWithErrors = () => {
@@ -84,17 +99,17 @@ const EconomyForm = () => {
         </form>
         <article className="economy-card">
           <article className="economy-result">
-            <h3 className="title-3">Financial Savings</h3>
-            <p className="economy-result-value">$ 40.000</p>
+            <h3 className="title-3">System Capacity</h3>
+            <p className="economy-result-value">{systemCapacity} Kw</p>
           </article>
           <ul className="economy-metrics">
             <li className="economy-metric-item">
-              <p className="title-4">CO₂ Reduction</p>
-              <p className="title-3">Up to $60/month</p>
+              <p className="title-4">Coverage of Energy Demand</p>
+              <p className="title-3">{coverageOfEnergy}%</p>
             </li>
             <li className="economy-metric-item">
-              <p className="title-4">Return on Investment</p>
-              <p className="title-3">4-6 years</p>
+              <p className="title-4">Bill Reduction Estimate</p>
+              <p className="title-3">${billReduction}/month</p>
             </li>
             <li className="economy-metric-item">
               <p className="title-4">Energy Independence</p>
