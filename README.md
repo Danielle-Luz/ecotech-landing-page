@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-   <img src="src\assets\EcoTech desktop.gif" alt="gif showing the site opened on a desktop device" /> 
+   <img src="public\assets\EcoTech desktop.gif" alt="gif showing the site opened on a desktop device" /> 
 </p>
 <p align="center">
-   <img src="src\assets\EcoTech responsive.gif" alt="gif showing the site responsiveness" /> 
+   <img src="public\assets\EcoTech responsive.gif" alt="gif showing the site responsiveness" /> 
 </p>
 
 <h2 id="How to access"> :computer_mouse: How to access?</h2>
