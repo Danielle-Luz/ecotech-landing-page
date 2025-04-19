@@ -11,21 +11,21 @@ const Results = () => {
       </article>
       <ul className="result-cards">
         <li className="result-card-item">
-          <img src="./../../../public/assets/family.svg" />
+          <img src="./../../../assets/family.svg" />
           <h3 className="title-3">Communities Impacted</h3>
           <p className="text-2">
             50 communities benefited with access to solar energy and eco-friendly solutions.
           </p>
         </li>
         <li className="result-card-item">
-          <img src="./../../../public/assets/co2.svg" />
+          <img src="./../../../assets/co2.svg" />
           <h3 className="title-3">CO2 Emissions Reduced</h3>
           <p className="text-2">
             Over 1,000 tons of CO2 avoided through the installation of our solar panels.
           </p>
         </li>
         <li className="result-card-item">
-          <img src="./../../../public/assets/money-box.svg" />
+          <img src="./../../../assets/money-box.svg" />
           <h3 className="title-3">Energy Bill Savings</h3>
           <p className="text-2">
             Our customers save an average of 30% on their energy bills after installing solar panels.
