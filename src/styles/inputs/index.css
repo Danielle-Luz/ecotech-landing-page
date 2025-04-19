@@ -9,6 +9,7 @@
 .form-field-1 {
   background-color: var(--color-grey-3);
   border-bottom: 3px solid transparent;
+  color: var(--color-grey-1);
   font-size: var(--font-size-text-2);
   padding: 10px 20px;
   height: 41px;
