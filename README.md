@@ -26,7 +26,7 @@
 
 <h2 id="How to access"> :computer_mouse: How to access?</h2>
 
-Access and interact with the project: <a href="">click here to access it</a>.
+Access and interact with the project: <a href="https://ecotech-landing-page.vercel.app/">click here to access it</a>.
 
 
 <h2 id="Description">:pencil2: Description</h2>
