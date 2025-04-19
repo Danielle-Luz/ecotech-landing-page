@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-   <img src="src\assets\imgs\readme\site-pc.gif" alt="gif showing the site opened on a desktop device" /> 
+   <img src="src\assets\EcoTech desktop.gif" alt="gif showing the site opened on a desktop device" /> 
 </p>
 
 <h2 id="How to access"> :computer_mouse: How to access?</h2>
