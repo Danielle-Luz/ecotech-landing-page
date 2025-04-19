@@ -5,10 +5,15 @@ import "./index.css";
 import { useEffect, useState } from "react";
 
 const EconomyForm = () => {
-  const {handleSubmit, register, formState: {errors}} = useForm({resolver: yupResolver(formSchema), mode: "onChange"});
+  const {handleSubmit, register, formState: {errors}} = useForm({
+      resolver: yupResolver(formSchema), 
+      mode: "onChange"
+  });
+
   const [systemCapacity, setSystemCapacity] = useState(0);
   const [coverageOfEnergy, setCoverageOfEnergy] = useState(0);
   const [billReduction, setBillReduction] = useState(0);
+  const [productBestFit, setProductBestFit] = useState("Not determined");
 
   const calculateSystemCapacity = ({space, solarPanel, commercialSystem, portableKits}) => {
     const availableSystemsToSelect = {solarPanel, commercialSystem, portableKits};
@@ -36,17 +41,27 @@ const EconomyForm = () => {
   }
 
   const calculateBillReduction = (averageEnergyBill, coverageOfEnergy) => {
-    return coverageOfEnergy * averageEnergyBill;
+    return (coverageOfEnergy / 100) * averageEnergyBill;
+  }
+
+  const getProductBestFit = (space, energyConsumption) => {
+    return (
+      space >= 20 ?  "Residential Solar Panels" : 
+      energyConsumption < 200 ? "Portable Kits" : 
+      "Commercial Systems"
+    )
   }
 
   const calculateEnergySavings = (formData) => {
     const systemCapacityResult = calculateSystemCapacity(formData);
     const coverageOfEnergyResult = calculateCoverageOfEnergy(systemCapacityResult, formData.consumption);
     const billReductionResult = calculateBillReduction(formData.energyBill, coverageOfEnergyResult);
+    const productBestFitResult = getProductBestFit(formData.space, formData.consumption);
 
-    setSystemCapacity(systemCapacityResult);
-    setCoverageOfEnergy(coverageOfEnergyResult);
-    setBillReduction(billReductionResult);
+    setSystemCapacity(systemCapacityResult.toFixed(2));
+    setCoverageOfEnergy(coverageOfEnergyResult.toFixed(2));
+    setBillReduction(billReductionResult.toFixed(2));
+    setProductBestFit(productBestFitResult);
   }
  
   const resetFieldsWithErrors = () => {
@@ -95,7 +110,7 @@ const EconomyForm = () => {
               <label className="text-2" htmlFor="portable-kits">Portable Kits</label>
             </article>
           </fieldset>
-          <input type="submit" className="button-1" value="Fazer simulação" />
+          <input type="submit" className="button-1" value="Simulate" />
         </form>
         <article className="economy-card">
           <article className="economy-result">
@@ -109,11 +124,11 @@ const EconomyForm = () => {
             </li>
             <li className="economy-metric-item">
               <p className="title-4">Bill Reduction Estimate</p>
-              <p className="title-3">${billReduction}/month</p>
+              <p className="title-3">${billReduction}</p>
             </li>
             <li className="economy-metric-item">
-              <p className="title-4">Energy Independence</p>
-              <p className="title-3">Up to 90%</p>
+              <p className="title-4">Product Best Fit</p>
+              <p className="title-3">{productBestFit}</p>
             </li>
           </ul>
         </article>
