@@ -5,7 +5,7 @@
 }
 
 .call-to-action {
-  background-image: url("../../../public/assets/call-to-action-background.svg");
+  background-image: url("../../../assets/call-to-action-background.svg");
   background-size: cover;
   border-radius: 10px;
   height: 100%;
