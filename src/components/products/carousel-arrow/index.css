@@ -1,0 +1,15 @@
+.carousel-arrow {
+  width: 50px;
+  z-index: 2;
+}
+
+.mirror {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media (max-width: 460px) {
+  .carousel-arrow  {
+    width: 35px;
+  }
+}

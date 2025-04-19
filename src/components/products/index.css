@@ -1,0 +1,42 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.products .title-2 {
+  text-align: center;
+}
+
+.product-card-item {
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.product-image {
+  border-radius: 8px;
+  height: 188px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.product-card-item, .slick-track, .slick-slider, .slick-slide {
+  display: flex !important;
+}
+
+.slick-track {
+  gap: 10px;
+}
+
+.slick-slider {
+  align-items: center;
+  gap: 10px;
+}
+
+.slick-slide {
+  justify-content: center;
+}

@@ -1,0 +1,21 @@
+.all-sides-spacing-1 {
+  padding: 20px 40px;
+}
+
+.horizontal-spacing-1 {
+  padding: 0 80px;
+}
+
+.horizontal-spacing-2 {
+  padding: 0 40px;
+}
+
+@media (max-width: 690px) {
+  .horizontal-spacing-1 {
+    padding: 0 25px;
+  }
+
+  .horizontal-spacing-2 {
+    padding: 0 25px;
+  }
+}

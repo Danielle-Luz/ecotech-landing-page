@@ -1,7 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+.header {
+  align-items: center;
+  display: flex;
+  box-shadow: 4px 4px 15px 0 var(--color-grey-low-opacity-1);
+  justify-content: space-between;
+  padding: 25px 80px;
+}
+
 .logo {
   font-family: "DM Sans", sans-serif;
   font-size: 30px;
   font-weight: bold;
+}
+
+.navbar-links-group {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  font-weight: bold;
+}
+
+.hamburguer-menu {
+  display: none;
+  width: 40px;
+}
+
+.hamburguer-menu img {
+  width: 100%;
+}
+
+@media (max-width: 895px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .header {
+    padding: 0;
+    gap: 0;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .navbar {
+    background-color: var(--color-grey-1);
+    height: 0;
+    width: 100%;
+    transition: all 0.8s;
+    overflow: hidden;
+  }
+  
+  .navbar-links-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar-link {
+    color: white;
+  }
+
+  .hamburguer-menu {
+    opacity: 100%;
+    display: block;
+  }
+
+  .hamburguer-menu:hover {
+    opacity: 50%;
+    transition: all 0.3s;
+  }
+
+  .showMobileMenu {
+    display: block;
+    height: fit-content;
+    padding: 25px;
+  }
 }
